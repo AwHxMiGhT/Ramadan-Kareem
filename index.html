@@ -20,9 +20,12 @@
 
     <!-- الصفحة التانية -->
     <div class="video-page" id="videoPage">
-        <video id="myVideo" autoplay muted>
-            <source src="ramadan/Ramadan.mp4" type="video/mp4">
-        </video>
+        <div class="video-container">
+            <iframe width="100%" height="100%" 
+                src="https://www.youtube.com/embed/Eu9AEZKLenA?autoplay=1&mute=0&rel=0" 
+                title="Ramadan Video" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen>
+            </iframe>
+        </div>
 
         <div class="message">
             كل سنة وانت طيب ❤️ <br>
@@ -34,17 +37,11 @@
 
 <script>
 function goToVideo(){
-
     let password = document.getElementById("password").value;
 
     if(password === "ramadan kareem"){
         document.getElementById("loginPage").style.display = "none";
         document.getElementById("videoPage").style.display = "flex";
-
-        let video = document.getElementById("myVideo");
-        video.muted = false;
-        video.play();
-
     }else{
         alert("الباسورد غلط ❌ جرب تاني");
     }
@@ -53,5 +50,3 @@ function goToVideo(){
 
 </body>
 </html>
-
-
